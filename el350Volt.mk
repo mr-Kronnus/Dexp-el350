@@ -51,3 +51,25 @@ PRODUCT_DEVICE := grandprimeve3g
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SM-G531H
+
+# Charger
+PRODUCT_PACKAGES += \
+	charger \
+	charger_res_images
+
+# Rootdir files
+ROOTDIR_FILES := \
+	$(LOCAL_PATH)/ramdisk/init.rc \
+	$(LOCAL_PATH)/ramdisk/init.board.rc \
+	$(LOCAL_PATH)/ramdisk/init.recovery.board.rc \
+	$(LOCAL_PATH)/ramdisk/init.sc8830.rc \
+	$(LOCAL_PATH)/ramdisk/init.sc8830.usb.rc \
+	$(LOCAL_PATH)/ramdisk/init.sc8830_ss.rc \
+	$(LOCAL_PATH)/ramdisk/init.grandprimeve3g.rc \
+	$(LOCAL_PATH)/ramdisk/init.grandprimeve3g_base.rc \
+	$(LOCAL_PATH)/ramdisk/init.wifi.rc \
+	$(LOCAL_PATH)/ramdisk/ueventd.sc8830.rc \
+	$(LOCAL_PATH)/ramdisk/fstab.sc8830
+
+PRODUCT_COPY_FILES += \
+	$(foreach f,$(ROOTDIR_FILES),$(f):root/$(notdir $(f)))
