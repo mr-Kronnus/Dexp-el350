@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/el350Volt.mk
+	$(LOCAL_DIR)/device_el350.mk
