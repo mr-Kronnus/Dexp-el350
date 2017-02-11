@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from the proprietary version
--include vendor/samsung/grandprimeve3g/BoardConfigVendor.mk
+-include vendor/dexp/el350/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm
@@ -43,5 +43,5 @@ BOARD_USE_LEGACY_TOUCHSCREEN := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file"
 
-TARGET_RECOVERY_INITRC := device/samsung/grandprimeve3g/etc/init.rc
-TARGET_RECOVERY_FSTAB := device/samsung/grandprimeve3g/ramdisk/fstab.sc8830
+TARGET_RECOVERY_INITRC := device/dexp/el350/etc/init.rc
+TARGET_RECOVERY_FSTAB := device/dexp/el350/ramdisk/fstab.sc8830
