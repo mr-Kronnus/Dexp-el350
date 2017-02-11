@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/grandprimeve3g
+LOCAL_PATH := device/dexp/el350
 
 PRODUCT_AAPT_CONFIG :=ldpi mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG :=xhdpi
@@ -40,17 +40,17 @@ PERMISSION_XML_FILES := \
 PRODUCT_COPY_FILES += \
 $(foreach f,$(PERMISSION_XML_FILES),$(f):system/etc/permissions/$(notdir $(f)))
 
-$(call inherit-product-if-exists, vendor/samsung/grandprimeve3g/el350Volt-vendor.mk)
+$(call inherit-product-if-exists, vendor/dexp/el350/el350-vendor.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-PRODUCT_NAME := el350Volt
-PRODUCT_DEVICE := grandprimeve3g
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-G531H
+PRODUCT_NAME := Ixion_Volt
+PRODUCT_DEVICE := el350
+PRODUCT_BRAND := dexp
+PRODUCT_MANUFACTURER := dexp
+PRODUCT_MODEL := el350
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -65,8 +65,6 @@ ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/init.sc8830.rc \
 	$(LOCAL_PATH)/ramdisk/init.sc8830.usb.rc \
 	$(LOCAL_PATH)/ramdisk/init.sc8830_ss.rc \
-	$(LOCAL_PATH)/ramdisk/init.grandprimeve3g.rc \
-	$(LOCAL_PATH)/ramdisk/init.grandprimeve3g_base.rc \
 	$(LOCAL_PATH)/ramdisk/init.wifi.rc \
 	$(LOCAL_PATH)/ramdisk/ueventd.sc8830.rc \
 	$(LOCAL_PATH)/ramdisk/fstab.sc8830
